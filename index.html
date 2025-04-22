@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xBeats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logo/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <img class="Logo" src="./logo/xBeats logo.png" alt="logo">
+        <nav class="menu-topo">
+            <ul>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="beats.html">Beats</a></li>
+                <li><a href="drumkits.html">Drum Kits</a></li>
+                <li><a href="samplepacks.html">Sample Packs</a></li>
+                <li><a href="pacotesdebeats.html">Pacotes De Beats</a></li>
+            </ul>
+        </nav>
+    </div>    
+    <button id="dark-mode-toggle">🌚 Modo Escuro</button>
+    </header>
+    
+    <aside class="menu-lateral">
+        <nav>
+            <ul>
+                <li><a href="hiphop.html">Hip Hop</a></li>
+                <li><a href="trap.html">Trap</a></li>
+                <li><a href="lofi.html">Lo-Fi</a></li>
+                <li><a href="electronic.html">Eletrônica</a></li>
+                <li><a href="pop.html">Pop</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Bem-vindo à minha loja de beats!</h1>
+        <p>Escolha um gênero no menu lateral para ver os beats disponíveis.</p>
+    </main>
+
+    <div class="beats-container">
+        <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Battle Beat/battle beat.png" alt="Capa do Beat">
+            <h2>(FREE) MF Doom x Joey Badass Type Beat - Battle</h2>
+            
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Battle Beat/(FREE) MF Doom x Joey Badass Type Beat - Battle Beat mp3 com tag .mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+        <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+        <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vibration/VIBRATION CAPA.png" alt="Capa do Beat">
+            <h2>(FREE) MF Doom x Joey Badass Type Beat - Vibration</h2>
+            
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vibration/(FREE) MF Doom x Joey Badass Type Beat - Vibration mp3 com tag.mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+         <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+         <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vintage Vibes/vintage vibes.png" alt="Capa do Beat">
+            <h2>(FREE) MF Doom x Joey Badass Type Beat - Vintage</h2>
+            
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vintage Vibes/(FREE) MF Doom x Joey Badass Type Beat - Vintage Vibes com tag.mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+         <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+         <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE)Central Cee x Ice Spice Cash Drill Type Beat - Yellowstone/218.png" alt="Capa do Beat">
+            <h2>(FREE) Centrall Cee x Ice Spice Cash Drill Type Beat - Yellowstone</h2>
+            
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE)Central Cee x Ice Spice Cash Drill Type Beat - Yellowstone/(FREE)Central Cee x Ice Spice Cash Drill Type Beat - Yellowstone mp3 com tag.mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body> 
+   
+</html>
