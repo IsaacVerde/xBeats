@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 
 
-body {
+body,html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url('./imagemFundo/Design\ sem\ nome.png') ;
 }
 
 header {
@@ -17,48 +20,93 @@ header {
     background-color: #000000;
     padding: 15px;
     z-index: 1000; /* Garante que fique sobre os outros elementos */
+    height: 60px; /* Reduz a altura do header */
 }
+
 .header-container{
     display: flex;
     justify-content: left;
     align-items: center;
 }
+/*caixa de som*/
+
+.speaker-icon {
+    height:250px; /* Ajuste conforme necessário */
+    width: 250px;
+    position: absolute;
+    right: 150px; /* Ajuste para ficar ao lado do botão */
+    top: -160px; /* Ajusta a altura dentro do header */
+}
+
+.dançarinos{
+    height:200px; /* Ajuste conforme necessário */
+    width: 250px;
+    position: absolute;
+    right: 250px; /* Ajuste para ficar ao lado do botão */
+    top: -110px; /* Ajusta a altura dentro do header */
+}
+
+
 .Logo{
-    max-width:100px;
+    max-width:70px;
     margin-right: 20px;
     border-radius: 50%;
 
 }
 .menu-topo ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+    display: flex; /* Mantém os itens organizados em linha */
+    justify-content: center; /* Centraliza os itens */
+    list-style: none; /* Remove os marcadores */
+    padding: 0; /* Remove espaçamento vertical */
+    margin: 0; /* Remove margens adicionais */
 }
 
 .menu-topo ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .menu-topo ul li a {
-    font-family:"Special Gothic Expanded One", sans-serif;
-    color: rgb(255, 255, 255);
+    font-family: "Special Gothic Expanded One", sans-serif; /* Fonte estilizada */
+    color: rgb(255, 255, 255); /* Cor do texto */
     text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Animação suave */
+    padding: 5px 8px; /* Reduz espaço interno para tornar o menu mais compacto */
+    border-radius: 3px; /* Bordas menos arredondadas para elegância */
+}
+
+
+.menu-topo ul li a:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Efeito de leve aumento */
 }
 
 .menu-lateral {
     position: fixed;
     left: 0;
-    top: 100px; /* Ajuste conforme a altura do cabeçalho */
+    top: 90px; /* Ajuste conforme a altura do cabeçalho */
     width: 120px;
     height: 100vh; /* Garante que o menu ocupe toda a altura da tela */
     background-color: #414142;
     padding-top: 20px;
     z-index: 999; /* Mantém ele abaixo do topo */
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+.menu-footer {
+    margin-top: 200px;
+    font-size: 10px;
+    text-align: center;
+    color: #aaa;
+    padding: 10px;
+    width: 80%;
 }
 
 .menu-lateral ul {
     list-style: none;
     padding: 0;
+    padding-top: 50px;
 }
 
 .menu-lateral ul li {
@@ -69,31 +117,89 @@ header {
     color: white;
     text-decoration: none;
     font-family:"Special Gothic Expanded One", sans-serif;
+    transition: all 0.3s ease-in-out; /* Animação suave */
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+.menu-lateral ul li a:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    transform: translateX(10px); /* Efeito de deslocamento */
 }
 
-main {
-    text-align: center;
-    margin-left: 150px;
-    padding: 20px;
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os filtros e a barra quebrem de linha, se necessário */
+    gap: 15px; /* Espaçamento entre os elementos */
+    width: calc(100% - 250px); /* Ocupa o restante do espaço após o menu lateral */
+    margin: 20px auto; /* Adiciona margem para distanciar do topo e dos beats */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    position: relative; /* Garante que permaneça no fluxo normal do layout */
+    left: 250px; /* Ajusta o deslocamento para alinhar após o menu lateral */
+}
+
+.search-bar {
+    width: 300px; /* Define um tamanho adequado para a barra de pesquisa */
+    padding: 10px; /* Adiciona margem interna */
+    border: 1px solid #ddd; /* Borda simples */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.genre-filters {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    flex-wrap: wrap; /* Permite quebra de linha para telas pequenas */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+.filter-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 14px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3; /* Destaque ao passar o mouse */
 }
 
 .beats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Garante um máximo de 4 por linha */
+    justify-content: center;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Opcional: Alinha os beats no centro */
+    flex-wrap: wrap; /* Garante que os beats quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens */
     gap: 20px; /* Espaço entre os beats */
+    margin-top: 100px;
 }
 
 .beat-box {
-    width: 250px;
+    width: calc(20% - 20px); /* Ajusta o tamanho para caber 5 beats por linha */
     padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
+    min-width: 200px; /* Ajuste mínimo para evitar que os elementos fiquem muito pequenos */
+    background-color: #ffffff;
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total */
+    margin: 10px;
+    border-radius: 10px; /* Aplica bordas arredondadas ao contêiner */
+    overflow: hidden; /* Garante que o conteúdo siga o border-radius */
 }
 
 .beat-box img {
-    width: 100%;
-    border-radius: 8px;
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra causado por imagens inline */
+    border-radius: inherit; /* Faz com que a imagem siga o mesmo border-radius do contêiner */
 }
 
 .price-button {
@@ -163,42 +269,6 @@ main {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/*modo escuro*/
-
-.dark-mode {
-    background-color: #181818;
-    color: #ffffff;    
-
-}
-
-.dark-mode .menu-topo ul li a, 
-.dark-mode .menu-lateral ul li a {
-    color: #ffffff;
-}
-
-.dark-mode button {
-    background-color: #444;
-    color: white;
-
-}
-#dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 80px;
-    padding: 10px;
-    background-color: #222;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #444;
-    transform: scale(1.1);
-}
 
 /* Botao Player de audio*/
 
@@ -218,6 +288,134 @@ main {
     transform: scale(1.05);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/* Contêiner do Carrossel */
+
+.carrousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+/* Área do Carrossel */
+.carrousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Ajuste dos Itens do Carrossel */
+.carrousel-item {
+    width: 100%;
+    height: 350px; /* Ajuste a altura conforme necessário */
+    flex: 0 0 100%;
+    object-fit: cover;
+}
+
+/* Botões de navegação */
+.carrousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicadores do Carrossel */
+.carrousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: gray;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background: black;
+}
+/* Botões de navegação */
+.carrousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicadores */
+.carrousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: gray;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background: black;
+}
+
+.credibility-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaço entre os itens */
+    margin: 20px 0; /* Espaço acima e abaixo */
+    background-color: #ffffff; /* Fundo claro para destacar */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.credibility-item {
+    text-align: center; /* Centraliza os ícones e textos */
+    max-width: 200px; /* Limita o tamanho dos itens */
+}
+
+.credibility-icon {
+    width: 50px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-bottom: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.credibility-item h3 {
+    font-family:"Special Gothic Expanded One", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
 /*Responsividade*/
 
 @media (max-width: 768px){
@@ -232,15 +430,72 @@ main {
     .menu-topo ul li {
         margin: 5px;
     }
+    .menu-footer {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        padding: 8px;
+    }
     .beats-container {
-        flex-direction: column; /* Empilha os beats verticalmente */
-        align-items: center; /* Centraliza na tela */
+        min-height: 100vh; /* Garante que ocupe a tela toda sem espaço extra */
+        margin-top: 70px;
+        padding: 0;
     }
 
     .beat-box {
         width: 90%; /* Ajusta o tamanho para ocupar melhor a tela */
+        margin-top: 100px;
     }
-    .main {
-        display: none;
+    main {
+   display: none;
+}
+
+    #dark-mode-toggle {
+    top: 160px;
+    right: 180px;
+    padding: 4px;
+    font-size: 10px;
+}
+
+    .carousel-container {
+    max-width: 100%; /* O carrossel ocupa toda a largura da tela */
+    height: auto; /* Ajusta a altura automaticamente */
+    margin-top: 250px;
+}
+
+    .carousel-item {
+    height: 100px; /* Reduz a altura do banner em telas menores */
+    object-fit: cover;
+}
+
+    .carousel-btn {
+    font-size: 16px; /* Ajusta tamanho dos botões */
+    padding: 8px;
+}
+
+    .carousel-indicators {
+    margin-top: 5px; /* Ajusta posição dos indicadores */
+}
+.dançarinos{
+    display: none;
+}
+.speaker-icon{
+    display: none;
+}
+
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        height: 100px; /* Mantém a proporção em telas muito pequenas */
+    }
+
+    .carousel-btn {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .carousel-indicators {
+        display: none; /* Esconde os indicadores para não ocupar espaço demais */
     }
 }

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xBeats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logo/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="./logo/dançarinos.png" class="dançarinos" alt="dançarinos">
+            <img src="./logo/caixa de som.png"alt="Caixa de Som" class="speaker-icon">
+            <a href="./index.html"><img class="Logo" src="./logo/xBeats logo.png" alt="logo"></a>
+        <nav class="menu-topo">
+            <ul>
+                <li><a href="./beats.html">Beats</a></li>
+                <li><a href="./drumKits.html">Drum Kits</a></li>
+                <li><a href="./samplePacks.html">Sample Packs</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>    
+
+    </header>
+    
+    <aside class="menu-lateral">
+        <nav>
+            <ul>
+                <li><a href="hiphop.html">Hip Hop</a></li>
+                <li><a href="trap.html">Trap</a></li>
+                <li><a href="lofi.html">Lo-Fi</a></li>
+                <li><a href="drill.html">Drill</a></li>
+                <li><a href="pop.html">Pop</a></li>
+            </ul>
+        </nav>
+         <!-- Rodapé no menu lateral -->
+    <div class="menu-footer">
+        © 2025 xBeats. Todos os Direitos Reservados.
+    </div>
+    </aside>
+
+
+
+    <div class="filters-container">
+        <input type="text" class="search-bar" placeholder="Pesquisar beats..." id="search-bar">
+        <div class="genre-filters">
+            <button class="filter-btn" onclick="filtrarPorGenero('hiphop')">Hip Hop</button>
+            <button class="filter-btn" onclick="filtrarPorGenero('trap')">Trap</button>
+            <button class="filter-btn" onclick="filtrarPorGenero('lofi')">Lo-Fi</button>
+            <button class="filter-btn" onclick="filtrarPorGenero('drill')">Drill</button>
+            <button class="filter-btn" onclick="filtrarPorGenero('pop')">Pop</button>
+            <button class="filter-btn" onclick="filtrarPorGenero('todos')">Todos</button>
+        </div>
+    </div>
+    
+
+
+
+    <!--Adicionar Beats-->
+    <div class="beats-container">
+        <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Battle Beat/battle beat.png" alt="Capa do Beat">
+            <h2>(FREE) MF Doom x Joey Badass Type Beat - Battle</h2>
+        
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Battle Beat/(FREE) MF Doom x Joey Badass Type Beat - Battle Beat mp3 com tag .mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas(event)">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+        <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+        <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vibration/VIBRATION CAPA.png" alt="Capa do Beat">
+            <h2>(FREE) MF Doom x Joey Badass Type Beat - Vibration</h2>
+
+
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vibration/(FREE) MF Doom x Joey Badass Type Beat - Vibration mp3 com tag.mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+         <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+         <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vintage Vibes/vintage vibes.png" alt="Capa do Beat">
+            <h2>(FREE) MF Doom x Joey Badass Type Beat - Vintage</h2>
+            
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE) MF Doom x Joey Badass Type Beat - Vintage Vibes/(FREE) MF Doom x Joey Badass Type Beat - Vintage Vibes com tag.mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+        </div>
+         <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+         <div class="beat-box">
+            <img src="./Conteudo Dos Beats/(FREE)Central Cee x Ice Spice Cash Drill Type Beat - Yellowstone/218.png" alt="Capa do Beat">
+            <h2>(FREE) Central Cee x Ice Spice Cash Drill  Type Beat - Yellowstone </h2>
+            
+            <audio class="audio-player" controls>
+                <source src="./Conteudo Dos Beats/(FREE)Central Cee x Ice Spice Cash Drill Type Beat - Yellowstone/(FREE)Central Cee x Ice Spice Cash Drill Type Beat - Yellowstone mp3 com tag.mp3" type="audio/mp3">
+                Seu navegador não suporta áudio.
+            </audio>
+        
+            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+            <div class="license-options hidden">
+                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                <button onclick="mostrarDetalhes('silver')">Silver</button>
+            </div>
+            <div class="license-details hidden"></div>
+            </div>
+              <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+              <div class="beat-box">
+                <img src="./Conteudo Dos Beats/(FREE)MF DOOM x Joey Badass Boom Bap Type Beat - Echoes/ECHOES.png" alt="Capa do Beat">
+                <h2>(FREE) MF DOOM x Joey Badass Boom Bap Type Beat - Echoes</h2>
+                
+                <audio class="audio-player" controls>
+                    <source src="./Conteudo Dos Beats/(FREE)MF DOOM x Joey Badass Boom Bap Type Beat - Echoes/(FREE)MF DOOM x Joey Badass Boom Bap Type Beat - Echoes mp3 com tag.mp3" type="audio/mp3">
+                    Seu navegador não suporta áudio.
+                </audio>
+            
+                <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+                <div class="license-options hidden">
+                    <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                    <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                    <button onclick="mostrarDetalhes('silver')">Silver</button>
+                </div>
+                <div class="license-details hidden"></div>
+            </div>
+                  <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+                   <div class="beat-box">
+                <img src="./Conteudo Dos Beats/(FREE)MF DOOM x Joey Badass Boom Bap Type Beat - Introspection/INTROSPECTION CAPA.png" alt="Capa do Beat">
+                <h2>(FREE) MF DOOM x Joey Badass Boom Bap Type Beat - Instrospection</h2>
+                
+                <audio class="audio-player" controls>
+                    <source src="./Conteudo Dos Beats/(FREE)MF DOOM x Joey Badass Boom Bap Type Beat - Introspection/(FREE) MF Doom x Joey Badass Type Beat - Introspection .mp3" type="audio/mp3">
+                    Seu navegador não suporta áudio.
+                </audio>
+            
+                <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+                <div class="license-options hidden">
+                    <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                    <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                    <button onclick="mostrarDetalhes('silver')">Silver</button>
+                </div>
+                <div class="license-details hidden"></div>
+            </div>
+                  <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+                  <div class="beat-box">
+                    <img src="./Conteudo Dos Beats/(FREE)Type Beat Dancehall x Moombahton Type Beat - Quente/QUente.png" alt="Capa do Beat">
+                    <h2>(FREE) Type Beat Dancehall x Moombahton Type Beat - Quente</h2>
+                    
+                    <audio class="audio-player" controls>
+                        <source src="./Conteudo Dos Beats/(FREE)Type Beat Dancehall x Moombahton Type Beat - Quente/(FREE)Type Beat Dancehall x Moombahton Type Beat - Quente mp3 com tag.mp3" type="audio/mp3">
+                        Seu navegador não suporta áudio.
+                    </audio>
+                
+                    <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+                    <div class="license-options hidden">
+                        <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                        <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                        <button onclick="mostrarDetalhes('silver')">Silver</button>
+                    </div>
+                    <div class="license-details hidden"></div>
+                </div>
+                      <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+                      <div class="beat-box">
+                        <img src="./Conteudo Dos Beats/(FREE)Type Beat Dancehall x Shatta Type Beat - Tropical/TROPICAL.png" alt="Capa do Beat">
+                        <h2>(FREE) Type Beat Dancehall x Moombahton Type Beat - Tropical</h2>
+                        
+                        <audio class="audio-player" controls>
+                            <source src="./Conteudo Dos Beats/(FREE)Type Beat Dancehall x Shatta Type Beat - Tropical/(FREE)Type Beat Dancehall x Shatta Type Beat - Tropical mp3 com tag.mp3" type="audio/mp3">
+                            Seu navegador não suporta áudio.
+                        </audio>
+                    
+                        <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+                        <div class="license-options hidden">
+                            <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                            <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                            <button onclick="mostrarDetalhes('silver')">Silver</button>
+                        </div>
+                        <div class="license-details hidden"></div>
+                    </div>
+                          <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+                          <div class="beat-box">
+                            <img src="./Conteudo Dos Beats/(FREE)Type Beat Dancehall x Skillibeng Type Beat - Ritimo Fatal/RITIMO FATAL.png" alt="Capa do Beat">
+                            <h2>(FREE) Type Beat Dancehall x Skillibeng Type Beat - Fatal</h2>
+                            
+                            <audio class="audio-player" controls>
+                                <source src="./Conteudo Dos Beats/(FREE)Type Beat Dancehall x Skillibeng Type Beat - Ritimo Fatal/(FREE)Type Beat Dancehall x Skillibeng Type Beat - Ritimo Fatal mp3 com tag .mp3" type="audio/mp3">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        
+                            <button class="price-button" onclick="mostrarLicencas()">Escolha Sua Licença</button>
+                            <div class="license-options hidden">
+                                <button onclick="mostrarDetalhes('exclusive')">Exclusive</button>
+                                <button onclick="mostrarDetalhes('platinum')">Platinum</button>
+                                <button onclick="mostrarDetalhes('silver')">Silver</button>
+                            </div>
+                            <div class="license-details hidden"></div>
+                        </div>
+                              <!-- Adicione quantos beats quiser, eles se ajustarão automaticamente -->
+    </div>
+
+    <script src="script.js"></script>
+</body> 
+   
+</html>
